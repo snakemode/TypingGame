@@ -3,6 +3,7 @@ const input = document.getElementById('typed-value');
 const start = document.getElementById('start');
 
 let wordQueue;
+let highlightPosition;
 
 function startGame() {
     console.log("Game started!");
@@ -10,6 +11,9 @@ function startGame() {
     quoteText = "type me";
     wordQueue = quoteText.split(' ');
     quote.innerHTML = wordQueue.map(word => (`<span>${word}</span>`)).join('');
+
+    highlightPosition = 0;
+    quote.childNodes[highlightPosition].className = 'highlight';
 }
 
 function checkInput() {
@@ -23,6 +27,10 @@ function checkInput() {
 
     wordQueue.shift(); //shift removes first item (0th element)
     input.value = ""; // empty textbox
+
+    quote.childNodes[highlightPosition].className = "";             // unhighlight word
+    highlightPosition++;                                            // increment highlight position
+    quote.childNodes[highlightPosition].className = 'highlight';    // highlight new word
 }
 
 start.addEventListener('click', startGame);

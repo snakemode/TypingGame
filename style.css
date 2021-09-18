@@ -2,6 +2,11 @@
     background-color: #EA2027;
 }
 
+.highlight {
+    color: #FFC312;
+    text-decoration: underline;
+}
+  
 span:after {
     content: "";
     display: inline-block;
