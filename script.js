@@ -27,10 +27,18 @@ function checkInput() {
 
     wordQueue.shift(); //shift removes first item (0th element)
     input.value = ""; // empty textbox
+    quote.childNodes[highlightPosition].className = ""; // unhighlight word
 
-    quote.childNodes[highlightPosition].className = "";             // unhighlight word
+    if (wordQueue.length === 0) { // if we have run out of words in the queue then game over.
+        gameOver();
+        return;
+    }
+
     highlightPosition++;                                            // increment highlight position
     quote.childNodes[highlightPosition].className = 'highlight';    // highlight new word
+}
+
+function gameOver() {
 }
 
 start.addEventListener('click', startGame);
