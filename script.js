@@ -8,12 +8,17 @@ function startGame() {
     console.log("Game started!");
 
     targetWord = "typeme";
-
     quote.innerHTML = `<span>${targetWord}</span>`;
 }
 
 function checkInput() {
-    console.log("Checking", input.value);
+    const currentWord = targetWord;
+    const typedValue = input.value.trim();
+
+    if (currentWord !== typedValue) {
+        input.className = currentWord.startsWith(typedValue) ? "" : "error";
+        return;
+    }
 }
 
 start.addEventListener('click', startGame);
