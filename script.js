@@ -28,6 +28,10 @@ function startGame() {
     highlightPosition = 0;
     quote.childNodes[highlightPosition].className = 'highlight';
 
+    input.focus();
+    input.value = '';
+    message.innerText = '';
+
     startTime = new Date().getTime();
 }
 
