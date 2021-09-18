@@ -4,6 +4,7 @@ const start = document.getElementById('start');
 
 let wordQueue;
 let highlightPosition;
+let startTime;
 
 function startGame() {
     console.log("Game started!");
@@ -14,6 +15,8 @@ function startGame() {
 
     highlightPosition = 0;
     quote.childNodes[highlightPosition].className = 'highlight';
+
+    startTime = new Date().getTime();
 }
 
 function checkInput() {
@@ -39,7 +42,8 @@ function checkInput() {
 }
 
 function gameOver() {
-    message.innerHTML = `<span class="congrats">Congratuations!</span>`;
+    const elapsedTime = new Date().getTime() - startTime;
+    message.innerHTML = `<span class="congrats">Congratuations!</span> <br> You finished in ${elapsedTime / 1000} seconds.`;
 }
 
 start.addEventListener('click', startGame);
