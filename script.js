@@ -36,7 +36,7 @@ function startGame() {
 }
 
 function checkInput() {
-    const currentWord = wordQueue[0];
+    const currentWord = wordQueue[0].replaceAll(".", "").replaceAll(",", "");
     const typedValue = input.value.trim();
 
     if (currentWord !== typedValue) {
