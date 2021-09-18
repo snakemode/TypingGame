@@ -12,4 +12,9 @@ function startGame() {
     quote.innerHTML = `<span>${targetWord}</span>`;
 }
 
+function checkInput() {
+    console.log("Checking", input.value);
+}
+
 start.addEventListener('click', startGame);
+input.addEventListener('input', checkInput);
