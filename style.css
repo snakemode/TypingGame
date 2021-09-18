@@ -1,3 +1,26 @@
+
+main {
+    display: grid;
+    place-items: center;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 2rem;  
+  }
+  
+h1 {
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4em;
+    line-height: 105%;
+    color: white;
+}
+  
+p {
+    text-align: center;
+    font-size: 1.6em;
+}
+
 .error {
     background-color: #EA2027;
 }
