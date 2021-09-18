@@ -19,6 +19,8 @@ function checkInput() {
         input.className = currentWord.startsWith(typedValue) ? "" : "error";
         return;
     }
+
+    input.value = ""; // empty textbox
 }
 
 start.addEventListener('click', startGame);
