@@ -39,6 +39,7 @@ function checkInput() {
 }
 
 function gameOver() {
+    message.innerHTML = `<span class="congrats">Congratuations!</span>`;
 }
 
 start.addEventListener('click', startGame);
