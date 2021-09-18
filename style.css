@@ -30,6 +30,19 @@ p {
     background-color: #EA2027;
 }
 
+button {
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+    border: 0;
+    border-radius: 50px;
+    font-size: 1.6em;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+  
 .highlight {
     color: #FFC312;
     text-decoration: underline;
