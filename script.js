@@ -33,6 +33,9 @@ function startGame() {
     message.innerText = '';
 
     startTime = new Date().getTime();
+
+    document.body.className = "";
+    start.className = "started";
 }
 
 function checkInput() {
@@ -59,6 +62,7 @@ function checkInput() {
 
 function gameOver() {
     const elapsedTime = new Date().getTime() - startTime;
+    document.body.className = "winner";
     message.innerHTML = `<span class="congrats">Congratuations!</span> <br> You finished in ${elapsedTime / 1000} seconds.`;
 }
 
