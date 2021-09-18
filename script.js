@@ -36,6 +36,7 @@ function startGame() {
 
     document.body.className = "";
     start.className = "started";
+    setTimeout(() => { start.className = "button"; }, 2000);
 }
 
 function checkInput() {
