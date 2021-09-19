@@ -11,6 +11,7 @@ const quotes = [
 const quote = document.getElementById('quote');
 const input = document.getElementById('typed-value');
 const start = document.getElementById('start');
+const message = document.getElementById('message');
 
 let wordQueue;
 let highlightPosition;
